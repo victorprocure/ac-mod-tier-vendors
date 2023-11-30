@@ -59,6 +59,7 @@ function TierVendor:GossipOnSelect(event, player, creature, sender, intId, code,
     end
 end
 
+-- Necessary to work with the AC Eluna event for registering Gossip, but also keeping the object intact
 function TierVendor.GossipOnSelectLambda(tierVendor)
     return function(event, player, creature, sender, intId, code, menuId)
         tierVendor:GossipOnSelect(event, player, creature, sender, intId, code, menuId)
