@@ -3,6 +3,7 @@ require("tier2vendors")
 require("tier3vendors")
 require("TierVendor")
 
+-- MAKE SURE THESE VALUES MATCH SQL FILE
 local NPC_TIER1 = 200000
 local NPC_TIER2 = 200001
 local NPC_TIER3 = 200002
