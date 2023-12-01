@@ -8,19 +8,19 @@ local NPC_TIER1 = 200000
 local NPC_TIER2 = 200001
 local NPC_TIER3 = 200002
 
-tier1Vendor = TierVendor.new(NPC_TIER1, VENDOR_TIER1_ITEMS, TIER1_CLASS_VENDORS)
-tier2Vendor = TierVendor.new(NPC_TIER2, VENDOR_TIER2_ITEMS, TIER2_CLASS_VENDORS)
-tier3Vendor = TierVendor.new(NPC_TIER3, VENDOR_TIER3_ITEMS, TIER3_CLASS_VENDORS)
+Tier1Vendor = TierVendor.new(NPC_TIER1, VENDOR_TIER1_ITEMS, TIER1_CLASS_VENDORS)
+Tier2Vendor = TierVendor.new(NPC_TIER2, VENDOR_TIER2_ITEMS, TIER2_CLASS_VENDORS)
+Tier3Vendor = TierVendor.new(NPC_TIER3, VENDOR_TIER3_ITEMS, TIER3_CLASS_VENDORS)
 
 
-RegisterCreatureGossipEvent(tier1Vendor:GetEntry(), EVENT_ONGOSSIPHELLO, TierVendor.GossipOnHello)
-RegisterCreatureGossipEvent(tier1Vendor:GetEntry(), EVENT_ONGOSSIPSELECT, TierVendor.GossipOnSelectLambda(tier1Vendor))
+RegisterCreatureGossipEvent(Tier1Vendor:GetEntry(), EVENT_ONGOSSIPHELLO, TierVendor.GossipOnHello)
+RegisterCreatureGossipEvent(Tier1Vendor:GetEntry(), EVENT_ONGOSSIPSELECT, TierVendor.GossipOnSelect(Tier1Vendor))
 
-RegisterCreatureGossipEvent(tier2Vendor:GetEntry(), EVENT_ONGOSSIPHELLO, TierVendor.GossipOnHello)
-RegisterCreatureGossipEvent(tier2Vendor:GetEntry(), EVENT_ONGOSSIPSELECT, TierVendor.GossipOnSelectLambda(tier2Vendor))
+RegisterCreatureGossipEvent(Tier2Vendor:GetEntry(), EVENT_ONGOSSIPHELLO, TierVendor.GossipOnHello)
+RegisterCreatureGossipEvent(Tier2Vendor:GetEntry(), EVENT_ONGOSSIPSELECT, TierVendor.GossipOnSelect(Tier2Vendor))
 
-RegisterCreatureGossipEvent(tier2Vendor:GetEntry(), EVENT_ONGOSSIPHELLO, TierVendor.GossipOnHello)
-RegisterCreatureGossipEvent(tier2Vendor:GetEntry(), EVENT_ONGOSSIPSELECT, TierVendor.GossipOnSelectLambda(tier3Vendor))
+RegisterCreatureGossipEvent(Tier2Vendor:GetEntry(), EVENT_ONGOSSIPHELLO, TierVendor.GossipOnHello)
+RegisterCreatureGossipEvent(Tier2Vendor:GetEntry(), EVENT_ONGOSSIPSELECT, TierVendor.GossipOnSelect(Tier3Vendor))
 
 local function GMLogin(event, player)
     if(player:GetGMRank() >1)then
@@ -30,6 +30,7 @@ local function GMLogin(event, player)
         SendWorldMessage("Add Tier3 Vendor with: .npc add "..NPC_TIER3)
     end
 end
+
 RegisterPlayerEvent(3, GMLogin)
 
 print("[Mod-Tier-Vendors]: Loaded")
