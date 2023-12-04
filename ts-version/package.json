@@ -1,0 +1,15 @@
+{
+    "scripts": {
+        "build": "tstl",
+        "dev": "tstl --watch"
+    },
+    "dependencies": {
+        "@azerothcore/eluna-ts-lib": "^1.0.13"
+    },
+    "devDependencies": {
+        "typescript-to-lua": "^1.22.0",
+        "typescript": "^5.2.2",
+        "lua-types": "^2.13.1",
+        "tslint": "^6.1.3"
+    }
+}

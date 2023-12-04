@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "target": "esnext",
+        "esModuleInterop": true,
+        "lib": [
+            "esnext"
+        ],
+        "types": [
+            "@azerothcore/eluna-ts-definitions",
+            "lua-types/5.4"
+        ],
+        "moduleResolution": "node"
+    },
+    "tstl": {
+        "luaTarget": "5.2",
+        "noHeader": true,
+        "luaLibImport": "none",
+        "luaBundle": "../mod-tier-vendor.lua",
+        "luaBundleEntry": "./src/index.ts"
+    }
+}

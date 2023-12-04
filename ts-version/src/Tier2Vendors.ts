@@ -1,0 +1,28 @@
+import { PlayerClass } from "./Classes";
+
+enum TierVendors {
+    VENDOR_TIER2_WARRIOR = 210000,
+    VENDOR_TIER2_PALADIN = 220000,
+    VENDOR_TIER2_HUNTER = 230000,
+    VENDOR_TIER2_ROGUE = 240000,
+    VENDOR_TIER2_PRIEST = 250000,
+    VENDOR_TIER2_SHAMAN = 270000,
+    VENDOR_TIER2_MAGE = 280000,
+    VENDOR_TIER2_WARLOCK = 290000,
+    VENDOR_TIER2_DRUID = 211000,
+    VENDOR_TIER2_ITEMS = 212000
+}
+
+export const GENERIC_ITEMS = TierVendors.VENDOR_TIER2_ITEMS;
+
+export const TIER_CLASS_VENDORS: { [id: number]: number } = {
+    [PlayerClass.CLASS_WARRIOR]: TierVendors.VENDOR_TIER2_WARRIOR,
+    [PlayerClass.CLASS_PALADIN]: TierVendors.VENDOR_TIER2_PALADIN,
+    [PlayerClass.CLASS_HUNTER]: TierVendors.VENDOR_TIER2_HUNTER,
+    [PlayerClass.CLASS_ROGUE]: TierVendors.VENDOR_TIER2_ROGUE,
+    [PlayerClass.CLASS_PRIEST]: TierVendors.VENDOR_TIER2_PRIEST,
+    [PlayerClass.CLASS_SHAMAN]: TierVendors.VENDOR_TIER2_SHAMAN,
+    [PlayerClass.CLASS_MAGE]: TierVendors.VENDOR_TIER2_MAGE,
+    [PlayerClass.CLASS_WARLOCK]: TierVendors.VENDOR_TIER2_WARLOCK,
+    [PlayerClass.CLASS_DRUID]: TierVendors.VENDOR_TIER2_DRUID
+}
